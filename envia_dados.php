@@ -14,9 +14,11 @@ ini_set('default_charset','UTF-8');
 	
 	$insert = "INSERT INTO desafio VALUES ('$cod','$tipo','$nome',$qtd,$preco,'$tipoNegocio')";
 	if($res = mysqli_query($conn,$insert)>0){
-		echo "Dados inseridos com sucesso !";
+		echo "Dados inseridos com sucesso !<br/>";
+		
+		echo "<a href='index.html'>Voltar</a>";
 	}else{
-		echo "Error";
+		echo "Erro ao inserir dados no banco";
 	}
 	
 	mysqli_close($conn);

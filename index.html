@@ -45,7 +45,18 @@
 			</tr>
 			<tr>
 				<td><label>Preço:</label></td>
-				<td><input class="form-control" type="number" name="preco" min="0" placeholder="preço"/></td>
+				<td>
+					<div class="form-group">
+						<label class="sr-only" for="exampleInputAmount">Valor (em Reais)</label>
+						<div class="input-group">
+							<div class="input-group-addon">R$</div>
+								<input type="number" class="form-control" name="preco" min="0" id="exampleInputAmount" placeholder="Valor">
+							<div class="input-group-addon">,00</div>
+						</div>
+					</div>
+				<!--input class="form-control" type="number" name="preco" min="0" placeholder="preço"/-->
+				</td>
+				
 			</tr>
 			<tr>
 				<td><label>Tipo do Negócio:</label></td>

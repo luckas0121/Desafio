@@ -37,3 +37,5 @@ function validacao(){
 	}
 	
 }
+
+$().alert()
