@@ -5,34 +5,50 @@
 <title>Desafio</title>
 
 <script type="text/javascript" src="javascript.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 </head>
+<style>
+	
+	form{
+		border: 2px solid black;
+		width:350px;
+		margin:auto;
+		padding:15px;
+		border-radius:10px;
+		
+	}	
+
+</style>
 
 <body>
 
-	<form name="form" method="POST" action="envia_dados.php" onsubmit="return validacao();">
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+	<form name="form" method="POST" action="envia_dados.php" onsubmit="return validacao();" class="form-vertical">
 		<table>
-			<tr>
-				<td>Código da Mercadoria:</td>
-				<td><input type="text" name="cod_mercadoria"/></td>
+			<tr> 
+				<td><label>Código da Mercadoria:</label></td>
+				<td ><input class="form-control" type="text" name="cod_mercadoria" placeholder="código"/></td>
 			</tr>
 			<tr>
-				<td>Tipo da Mercadoria:</td>
-				<td><input type="text" name="tipo_mercadoria"/></td>
+				<td><label>Tipo da Mercadoria:</label></td>
+				<td><input class="form-control" type="text" name="tipo_mercadoria" placeholder="mercadoria"/></td>
 			</tr>
 			<tr>
-				<td>Nome da Mercadoria:</td>
-				<td><input type="text" name="name_mercadoria"/></td>
+				<td><label>Nome da Mercadoria:</label></td>
+				<td><input class="form-control" type="text" name="name_mercadoria" placeholder="nome"/></td>
 			</tr>
 			<tr>
-				<td>Quantidade:</td>
-				<td><input type="number" name="qtd" min="0"/></td>
+				<td><label>Quantidade:</label></td>
+				<td><input class="form-control" type="number" name="qtd" min="0" placeholder="quantidade"/></td>
 			</tr>
 			<tr>
-				<td>Preço:</td>
-				<td><input type="number" name="preco" min="0"/></td>
+				<td><label>Preço:</label></td>
+				<td><input class="form-control" type="number" name="preco" min="0" placeholder="preço"/></td>
 			</tr>
 			<tr>
-				<td>Tipo do Negócio:</td>
+				<td><label>Tipo do Negócio:</label></td>
 				<td>
 					<input type="radio" name="tipo" value="compra">Compra<br>
 					<input type="radio" name="tipo" value="venda">Venda<br>
@@ -40,13 +56,16 @@
 			</tr>
 			<tr>
 				<td>
-					<input type="submit" name="submit" value="Enviar"/>
+					<button type="submit" class="btn btn-primary">Enviar</button>
 				</td>
 				<td>
-					<input type="reset" name="reset" value="Limpar"/>
+					<button type="reset" class="btn btn-danger">Limpar</button>
 				</td>
 			</tr>
 		</table>
+		
 	</form>
+	
+	
 </body>
 </html>
