@@ -1,43 +1,53 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html dir="ltr" lang="pt-BR">
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<<<<<<< HEAD
+<meta charset="UTF-8" /> 
 <title>Desafio</title>
-=======
->>>>>>> origin/master
+
+<!--script type="text/javascript" src="jquery.js"></script-->
+<script type="text/javascript" src="javascript.js"></script>
 </head>
+
 <body>
 
-	<table>
-		<tr>
-			<td>Código da Mercadoria:</td>
-			<td><input type="text" name="cod_mercadoria"/></td>
-		</tr>
-		<tr>
-			<td>Tipo da Mercadoria:</td>
-			<td><input type="text" name="tipo_mercadoria"/></td>
-		</tr>
-		<tr>
-			<td>Nome da Mercadoria:</td>
-			<td><input type="text" name="name_mercadoria"/></td>
-		</tr>
-		<tr>
-			<td>Quantidade:</td>
-			<td><input type="number" name="qtd" min="0"/></td>
-		</tr>
-		<tr>
-			<td>Preço:</td>
-			<td><input type="number" name="preco" min="0"/></td>
-		</tr>
-		<tr>
-			<td>Tipo do Negócio:</td>
-			<td>
-				<input type="radio" name="tipo" value="compra">Compra<br>
-				<input type="radio" name="tipo" value="venda">Venda<br>
-			</td>
-		</tr>
-
-	</table>
+	<form name="form" method="POST" action="envia_dados.php" onsubmit="return validacao();">
+		<table>
+			<tr>
+				<td>Código da Mercadoria:</td>
+				<td><input type="text" name="cod_mercadoria"/></td>
+			</tr>
+			<tr>
+				<td>Tipo da Mercadoria:</td>
+				<td><input type="text" name="tipo_mercadoria"/></td>
+			</tr>
+			<tr>
+				<td>Nome da Mercadoria:</td>
+				<td><input type="text" name="name_mercadoria"/></td>
+			</tr>
+			<tr>
+				<td>Quantidade:</td>
+				<td><input type="number" name="qtd" min="0"/></td>
+			</tr>
+			<tr>
+				<td>Preço:</td>
+				<td><input type="number" name="preco" min="0"/></td>
+			</tr>
+			<tr>
+				<td>Tipo do Negócio:</td>
+				<td>
+					<input type="radio" name="tipo" value="compra">Compra<br>
+					<input type="radio" name="tipo" value="venda">Venda<br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="submit" name="submit" value="Enviar"/>
+				</td>
+				<td>
+					<input type="reset" name="reset" value="Limpar"/>
+				</td>
+			</tr>
+		</table>
+	</form>
 </body>
 </html>
